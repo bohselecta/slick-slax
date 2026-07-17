@@ -1,4 +1,5 @@
 use crate::model::UsbDrive;
+#[cfg(any(target_os = "linux", target_os = "windows"))]
 use serde_json::Value as JsonValue;
 use std::process::Command;
 
