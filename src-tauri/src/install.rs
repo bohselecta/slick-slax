@@ -184,7 +184,7 @@ fn with_mounted_iso<T>(iso: &Path, action: impl FnOnce(&Path) -> Result<T, Strin
 
 #[cfg(target_os = "windows")]
 fn with_mounted_iso<T>(iso: &Path, action: impl FnOnce(&Path) -> Result<T, String>) -> Result<T, String> {
-    let escaped = iso.to_string_lossy().replace(''', "''");
+    let escaped = iso.to_string_lossy().replace('\'', "''");
     let script = format!("`$image=Mount-DiskImage -ImagePath '{escaped}' -PassThru; (`$image | Get-Volume).DriveLetter");
     let output = command_output(Command::new("powershell").args(["-NoProfile", "-NonInteractive", "-Command", &script]), "Could not mount the Slax ISO")?;
     let letter = output.trim();
