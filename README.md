@@ -56,6 +56,8 @@ npm install
 npm run tauri dev
 ```
 
+The npm lifecycle generates all platform icon formats from `app-icon.svg` before Tauri starts, so the repository does not carry generated icon binaries.
+
 Build an installer with:
 
 ```bash
@@ -96,4 +98,3 @@ The implementation follows Slax’s official [starting instructions](https://www
 Read [CONTRIBUTING.md](CONTRIBUTING.md) before changing disk behavior. UI changes can be tested in browser demo mode; destructive-path changes require removable hardware and the manual test matrix.
 
 MIT licensed. See [LICENSE](LICENSE).
-

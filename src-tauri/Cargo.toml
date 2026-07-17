@@ -1,0 +1,29 @@
+[package]
+name = "slick-slax"
+version = "0.1.0"
+description = "A safe, one-window Slax USB maker"
+authors = ["Hayden Lindley and contributors"]
+license = "MIT"
+repository = "https://github.com/bohselecta/slick-slax"
+edition = "2021"
+
+[lib]
+name = "slick_slax_lib"
+crate-type = ["staticlib", "cdylib", "rlib"]
+
+[build-dependencies]
+tauri-build = { version = "2", features = [] }
+
+[dependencies]
+tauri = { version = "2", features = [] }
+serde = { version = "1", features = ["derive"] }
+serde_json = "1"
+plist = "1"
+rfd = "0.15"
+open = "5"
+sha2 = "0.10"
+walkdir = "2"
+
+[target.'cfg(windows)'.dependencies]
+windows = { version = "0.61", features = ["Win32_Storage_FileSystem"] }
+
