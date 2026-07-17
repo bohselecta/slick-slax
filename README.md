@@ -1,5 +1,7 @@
 # SlickSlax
 
+[![Check](https://github.com/bohselecta/slick-slax/actions/workflows/check.yml/badge.svg)](https://github.com/bohselecta/slick-slax/actions/workflows/check.yml)
+
 **The safe, one-window Slax USB maker.**
 
 SlickSlax turns Slax’s manual USB setup into one guided desktop flow on Windows, Linux, and macOS. It does **not** raw-flash the ISO like a generic image writer: Slax needs a writable FAT32 filesystem so its persistent sessions can work. SlickSlax follows the project’s native layout instead:
