@@ -1,12 +1,11 @@
 {
   "buildCommand": "",
   "outputDirectory": "docs",
-  "headers": [
+  "redirects": [
     {
-      "source": "/downloads/(.*)",
-      "headers": [
-        { "key": "Content-Disposition", "value": "attachment" }
-      ]
+      "source": "/downloads/:file",
+      "destination": "https://raw.githubusercontent.com/bohselecta/slick-slax/main/docs/downloads/:file",
+      "permanent": false
     }
   ]
 }
