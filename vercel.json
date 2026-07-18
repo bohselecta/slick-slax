@@ -1,0 +1,12 @@
+{
+  "buildCommand": "",
+  "outputDirectory": "docs",
+  "headers": [
+    {
+      "source": "/downloads/(.*)",
+      "headers": [
+        { "key": "Content-Disposition", "value": "attachment" }
+      ]
+    }
+  ]
+}
