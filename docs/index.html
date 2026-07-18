@@ -1,0 +1,90 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="theme-color" content="#0c0f0d" />
+    <meta name="description" content="The safe, one-window Slax USB maker for Windows, Linux, and macOS." />
+    <title>SlickSlax — The safe Slax USB maker</title>
+    <link rel="icon" href="assets/icon.svg" type="image/svg+xml" />
+    <link rel="stylesheet" href="assets/site.css" />
+  </head>
+  <body>
+    <div class="ambient ambient--one"></div>
+    <div class="ambient ambient--two"></div>
+
+    <header class="site-header">
+      <a class="brand" href="./" aria-label="SlickSlax home">
+        <svg class="clover clover--small" viewBox="0 0 72 72" aria-hidden="true">
+          <path d="M36 33C11 31 11 7 26 7c7 0 10 6 10 13 0-7 3-13 10-13 15 0 15 24-10 26Z" />
+          <path d="M39 36c2-25 26-25 26-10 0 7-6 10-13 10 7 0 13 3 13 10 0 15-24 15-26-10Z" />
+          <path d="M36 39c25 2 25 26 10 26-7 0-10-6-10-13 0 7-3 13-10 13-15 0-15-24 10-26Z" />
+          <path d="M33 36C31 61 7 61 7 46c0-7 6-10 13-10-7 0-13-3-13-10C7 11 31 11 33 36Z" />
+          <circle cx="36" cy="36" r="6" class="clover__center" />
+        </svg>
+        <span>Slick</span><strong>Slax</strong>
+        <em>alpha</em>
+      </a>
+      <nav class="site-nav">
+        <a href="https://github.com/bohselecta/slick-slax" target="_blank" rel="noreferrer">Source</a>
+        <a href="https://www.slax.org/starting.php" target="_blank" rel="noreferrer">Slax guide</a>
+      </nav>
+    </header>
+
+    <main>
+      <section class="hero">
+        <p class="eyebrow">Your pocket OS, without the scavenger hunt</p>
+        <h1>The safe, one-window <span>Slax USB maker.</span></h1>
+        <p class="lede">
+          SlickSlax handles MBR, FAT32, copying, boot setup, and verification in one guided pass.
+          It does not raw-flash the ISO — Slax needs a writable filesystem for persistent sessions.
+        </p>
+
+        <div class="download-grid">
+          <a class="download-card download-card--primary" href="downloads/SlickSlax_0.1.0_aarch64.dmg" download>
+            <span class="download-kicker">macOS 10.15+</span>
+            <strong>Download for Mac</strong>
+            <small>Apple Silicon · v0.1.0 · 2.9 MB</small>
+            <span class="download-action">Get .dmg</span>
+          </a>
+          <div class="download-card download-card--soon">
+            <span class="download-kicker">Windows 10/11</span>
+            <strong>Installer coming soon</strong>
+            <small>Built on release tags via GitHub Actions</small>
+            <span class="download-action download-action--quiet">Watch releases</span>
+          </div>
+          <div class="download-card download-card--soon">
+            <span class="download-kicker">Desktop Linux</span>
+            <strong>AppImage / .deb coming soon</strong>
+            <small>Built on release tags via GitHub Actions</small>
+            <span class="download-action download-action--quiet">Watch releases</span>
+          </div>
+        </div>
+
+        <ul class="promise-row">
+          <li>One guided flow</li>
+          <li>Removable drives only</li>
+          <li>Confirmation before erase</li>
+          <li>No telemetry</li>
+        </ul>
+      </section>
+
+      <section class="steps">
+        <h2>What it does</h2>
+        <ol>
+          <li>Identifies a removable USB device</li>
+          <li>Creates MBR + FAT32 layout</li>
+          <li>Copies the Slax <code>/slax</code> tree from your ISO</li>
+          <li>Installs boot files and optional persistence</li>
+          <li>Verifies critical assets before eject</li>
+        </ol>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <span>Independent open-source tool for the Slax community.</span>
+      <span>Slax is created by Tomáš Matějíček · <a href="https://www.slax.org/" target="_blank" rel="noreferrer">slax.org</a></span>
+      <span>MIT · v0.1.0</span>
+    </footer>
+  </body>
+</html>
